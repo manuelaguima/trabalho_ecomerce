@@ -1,0 +1,180 @@
+:root {
+    --rosa-quente: #C77D8A;
+    --rosa-suave: #E8C7D1;
+    --creme-claro: #FFF9F3;
+    --bege-medio: #D6BFAF;
+    --marrom-rosado: #7F4A53;
+    --branco: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--creme-claro);
+    font-family: 'Georgia', serif;
+    color: var(--marrom-rosado);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Navegação */
+  .nav {
+    background-color: var(--rosa-suave);
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: var(--marrom-rosado);
+    font-weight: 500;
+    padding-bottom: 5px;
+    transition: 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .nav a:hover,
+  .nav a.ativo {
+    color: var(--rosa-quente);
+    border-bottom: 2px solid var(--rosa-quente);
+  }
+  
+  /* MAIN que centraliza a seção de contato */
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Seção de contato */
+  .contato {
+    min-width: 70vw;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contato h1 {
+    font-size: 2.5rem;
+    color: var(--rosa-quente);
+    margin-bottom: 1rem;
+  }
+  
+  .contato .descricao {
+    font-size: 1.1rem;
+    color: var(--bege-medio);
+    margin-bottom: 2rem;
+  }
+  
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 25%;
+  }
+  
+  .campo {
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--marrom-rosado);
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--rosa-suave);
+    border-radius: 8px;
+    background-color: var(--branco);
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--marrom-rosado);
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: var(--rosa-quente);
+    outline: none;
+  }
+  
+  button {
+    align-self: center;
+    background-color: var(--rosa-quente);
+    color: var(--branco);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--rosa-suave);
+    color: var(--marrom-rosado);
+  }
+  
+  #insta-image {
+    width: 80px;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  #insta-link {
+    width: 81px;
+    height: auto;
+  }
+  
+  /* Rodapé */
+  .rodape {
+    background-color: var(--rosa-suave);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: var(--marrom-rosado);
+    border-top: 1px solid #e9d9d9;
+  }
+  
+    /* Scrollbar personalizada para WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--creme-claro);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f4a6c0; /* rosa delicado */
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Para navegadores que suportam scrollbar-color (Firefox) */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #f4a6c0 #fff9f3;
+}

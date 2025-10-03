@@ -5,7 +5,6 @@ const Cliente = conn.define('clientes', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        allowNull: false,
         primaryKey: true
     },
     nome: {

@@ -2,6 +2,7 @@
     --rosa-quente: #C77D8A;
     --rosa-suave: #E8C7D1;
     --creme-claro: #FFF9F3;
+    --creme-img: #f8f0e9;
     --bege-medio: #D6BFAF;
     --marrom-rosado: #7F4A53;
     --branco: #ffffff;
@@ -89,6 +90,7 @@
     overflow: hidden;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+    margin: 20px;
   }
   
   .item:hover {
@@ -96,9 +98,11 @@
   }
   
   .item img {
+    padding: 10px;
     width: 100%;
     display: block;
     height: auto;
+    background-color: var(--creme-img);
   }
   
   .item h3 {

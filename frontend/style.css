@@ -1,260 +1,193 @@
-/* Reset básico */
+/* ========================= */
+/* Reset básico              */
+/* ========================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  :root {
-    --rosa-claro: #F8A1C4;
-    --rosa-suave: #F4D9E1;
-    --creme-claro: #FFF9F3;
-    --branco: #ffffff;
-    --cinza-suave: #5C5C5C;
-    --rosa-destaque: #E48AA1;
-  }
-  
-  /* Corpo geral */
-  body {
-    font-family: 'Georgia', serif;
-    background-color: var(--creme-claro);
-    color: var(--cinza-suave);
-    line-height: 1.6;
-  }
-  
-  /* Hero com faixa da imagem */
-  .hero-banner img {
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid #e5e5e5;
-  }
-  
-  /* Navegação delicada */
-  .top-nav {
-    background-color: var(--rosa-suave);
-    padding: 12px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  }
-  
-  .top-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
-  
-  .top-nav a {
-    text-decoration: none;
-    color: var(--cinza-suave);
-    font-size: 16px;
-    font-weight: 500;
-    position: relative;
-    padding-bottom: 4px;
-    transition: all 0.3s ease;
-  }
-  
-  .top-nav a:hover {
-    color: var(--rosa-destaque);
-    border-bottom: 1px solid var(--rosa-destaque);
-  }
-  
-  /* Seção destaque com layout suave */
-  .destaque {
-    background-color: var(--rosa-suave);
-    padding: 80px 20px;
-    text-align: center;
-    border-radius: 8px;
-    margin: 40px auto;
-    max-width: 900px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-  }
-  
-  .destaque h1 {
-    font-size: 2.8em;
-    color: var(--rosa-destaque);
-    margin-bottom: 12px;
-    font-weight: normal;
-  }
-  
-  .destaque p {
-    font-size: 1.2em;
-    color: var(--cinza-suave);
-    max-width: 600px;
-    margin: 0 auto 30px;
-  }
-  
-  .botao-destaque {
-    background-color: var(--rosa-destaque);
-    color: var(--branco);
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-  }
-  
-  .botao-destaque:hover {
-    background-color: var(--rosa-claro);
-  }
-  
-  /* Rodapé com toque delicado */
-  .rodape {
-    background-color: var(--rosa-suave);
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: var(--cinza-suave);
-    margin-top: 60px;
-    border-top: 1px solid #e9d9d9;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+:root {
+  --rosa-claro: #F8A1C4;
+  --rosa-suave: #F4D9E1;
+  --creme-claro: #FFF9F3;
+  --branco: #ffffff;
+  --cinza-suave: #5C5C5C;
+  --rosa-destaque: #E48AA1;
 
-  /* Scrollbar personalizada para WebKit (Chrome, Edge, Safari) */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: var(--creme-claro);
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #f4a6c0; /* rosa delicado */
-    border-radius: 20px;
-    border: 2px solid transparent;
-    background-clip: content-box;
-  }
-  
-  /* Para navegadores que suportam scrollbar-color (Firefox) */
-  html {
-    scrollbar-width: thin;
-    scrollbar-color: #f4a6c0 #fff9f3;
-  }
+  --rosa-quente: #C77D8A;
+  --rosa-suave2: #E8C7D1;
+  --bege-medio: #D6BFAF;
+  --marrom-rosado: #7F4A53;
+}
 
-  :root {
-    --rosa-quente: #C77D8A;
-    --rosa-suave: #E8C7D1;
-    --creme-claro: #FFF9F3;
-    --bege-medio: #D6BFAF;
-    --marrom-rosado: #7F4A53;
-    --branco: #ffffff;
-  }
+/* ========================= */
+/* Corpo geral               */
+/* ========================= */
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--creme-claro);
+  color: var(--cinza-suave);
+  line-height: 1.6;
+}
+
+/* ========================= */
+/* Hero com faixa da imagem  */
+/* ========================= */
+.hero-banner img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* ========================= */
+/* Navegação delicada        */
+/* ========================= */
+.top-nav {
+  background-color: var(--rosa-suave);
+  padding: 12px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: var(--cinza-suave);
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+.top-nav a:hover {
+  color: var(--rosa-destaque);
+  border-bottom: 1px solid var(--rosa-destaque);
+}
+
+/* ========================= */
+/* Seção destaque            */
+/* ========================= */
+.destaque {
+  background-color: var(--rosa-suave);
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.destaque h1 {
+  font-size: 2.8em;
+  color: var(--rosa-destaque);
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+
+.destaque p {
+  font-size: 1.2em;
+  color: var(--cinza-suave);
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.botao-destaque {
+  background-color: var(--rosa-destaque);
+  color: var(--branco);
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.botao-destaque:hover {
+  background-color: var(--rosa-claro);
+}
+
+/* ========================= */
+/* Coleções                  */
+/* ========================= */
+.colecoes {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.colecoes h1 {
+  font-size: 2.5rem;
+  color: var(--rosa-quente);
+  margin-bottom: 10px;
+}
+
+.colecoes .descricao {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: var(--bege-medio);
+}
+
+.grid-colecoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 40px;
+}
+
+.item {
+  background-color: var(--rosa-suave);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.03);
   
-  /* Reset básico */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: var(--creme-claro);
-    font-family: 'Georgia', serif;
-    color: var(--marrom-rosado);
-  }
-  
-  /* Faixa de topo */
-  .faixa-topo img {
-    width: 100%;
-    display: block;
-  }
-  
-  /* Navegação */
-  .nav {
-    background-color: var(--rosa-suave);
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-  
-  .nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
-  
-  .nav a {
-    text-decoration: none;
-    color: var(--marrom-rosado);
-    font-weight: 500;
-    padding-bottom: 5px;
-    transition: 0.3s ease;
-    font-size: 16px;
-  }
-  
-  .nav a:hover,
-  .nav a.ativo {
-    color: var(--rosa-quente);
-    border-bottom: 2px solid var(--rosa-quente);
-  }
-  
-  /* Título e descrição */
-  .colecoes {
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
-  .colecoes h1 {
-    font-size: 2.5rem;
-    color: var(--rosa-quente);
-    margin-bottom: 10px;
-  }
-  
-  .colecoes .descricao {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto 40px;
-    color: var(--bege-medio);
-  }
-  
-  /* Grid de coleções */
-  .grid-colecoes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 0 40px;
-  }
-  
-  .item {
-    background-color: var(--rosa-suave);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.03);
-  }
-  
-  .item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .item img {
-    width: 100%;
-    display: block;
-    height: auto;
-  }
-  
-  .item h3 {
-    padding: 15px;
-    font-size: 1.2rem;
-    color: var(--marrom-rosado);
-  }
-  
-  /* Rodapé */
-  .rodape {
-    background-color: var(--rosa-suave);
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: var(--marrom-rosado);
-    margin-top: 60px;
-    border-top: 1px solid #e9d9d9;
-  }
-  
-    /* Scrollbar personalizada para WebKit (Chrome, Edge, Safari) */
+  display: flex;
+  flex-direction: column; /* organiza imagem em cima e texto embaixo */
+}
+
+.item:hover {
+  transform: translateY(-5px);
+}
+
+.item img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.item h3 {
+  background-color: var(--rosa-suave);
+  padding: 15px;
+  font-size: 1.2rem;
+  color: var(--marrom-rosado);
+  margin-top: auto;   /* empurra para o final do card */
+  text-align: center;
+}
+
+/* ========================= */
+/* Rodapé                    */
+/* ========================= */
+.rodape {
+  background-color: var(--rosa-suave);
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--cinza-suave);
+  margin-top: 60px;
+  border-top: 1px solid #e9d9d9;
+}
+
+/* ========================= */
+/* Scrollbar personalizada   */
+/* ========================= */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -276,4 +209,3 @@ html {
   scrollbar-width: thin;
   scrollbar-color: #f4a6c0 #fff9f3;
 }
-  

@@ -23,6 +23,11 @@ const Contato = conn.define('contatos', {
     mensagem: {
         type: DataTypes.TEXT,
         allowNull: false
+    },
+    verificado: {
+        type: DataTypes.ENUM('sim', 'nao'),
+        allowNull: false,
+        defaultValue: 'nao'
     }
 }, {
     tableName: 'contatos',

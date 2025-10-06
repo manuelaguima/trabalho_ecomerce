@@ -4,13 +4,13 @@ require('dotenv').config()
 
 const app = express()
 const PORT = process.env.PORT
+const hostname = 'localhost'
 
 const conn = require('./db/conn')
 
 // Importa rotas
-const authRoutes = require('./routes/auth.routes')
 const clienteRoutes = require('./routes/cliente.routes')
-const controleRoutes = require('./routes/controle.routes')
+const contatoRoutes = require('./routes/contato.routes')
 
 // Middlewares globais
 app.use(express.urlencoded({ extended: true }))
@@ -23,16 +23,8 @@ app.get('/', (req, res) => {
 })
 
 // Rotas públicas
-app.use('/auth', authRoutes)
 app.use('/cliente', clienteRoutes)
-
-// Middleware de autenticação (protege tudo abaixo)
-const authMiddleware = require('./middleware/auth.middleware')
-app.use(authMiddleware)
-
-// Rotas privadas
-app.use('/cliente', clienteRoutes)
-app.use('/controle',  controleRoutes)
+app.use('/contato', contatoRoutes)
 
 conn.sync()
 .then(()=>{

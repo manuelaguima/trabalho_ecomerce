@@ -1,12 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const clienteController = require('../controller/cliente.controller')
+const authMiddleware = require('../middleware/auth.middleware')
 
 
 router.post('/', clienteController.cadastrar)
-router.get('/', clienteController.listar)
-router.get('/:id', clienteController.buscarPorId)
-router.put('/:id', clienteController.atualizar)
-router.delete('/:id', clienteController.deletar)
+router.delete('/:id', authMiddleware, clienteController.deletar)
 
 module.exports = router

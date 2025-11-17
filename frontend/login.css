@@ -1,0 +1,201 @@
+/* ========================= */
+/* Reset básico              */
+/* ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --rosa-claro: #F8A1C4;
+    --rosa-suave: #F4D9E1;
+    --creme-claro: #FFF9F3;
+    --branco: #ffffff;
+    --cinza-suave: #5C5C5C;
+    --rosa-destaque: #E48AA1;
+  
+    --rosa-quente: #C77D8A;
+    --rosa-suave2: #E8C7D1;
+    --bege-medio: #D6BFAF;
+    --marrom-rosado: #7F4A53;
+  }
+  
+  /* ========================= */
+  /* Corpo geral               */
+  /* ========================= */
+  body {
+    font-family: 'Georgia', serif;
+    background-color: var(--creme-claro);
+    color: var(--cinza-suave);
+    line-height: 1.6;
+  }
+  
+  /* ========================= */
+  /* Hero com faixa da imagem  */
+  /* ========================= */
+  .hero-banner img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  /* ========================= */
+  /* Navegação delicada        */
+  /* ========================= */
+  .top-nav {
+    background-color: var(--rosa-suave);
+    padding: 12px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  }
+  
+  .top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .top-nav a {
+    text-decoration: none;
+    color: var(--cinza-suave);
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .top-nav a:hover,
+  .top-nav .ativo {
+    color: var(--rosa-destaque);
+    border-bottom: 1px solid var(--rosa-destaque);
+  }
+  
+  /* ========================= */
+  /* Área de Login             */
+  /* ========================= */
+  .login-area {
+    max-width: 500px;
+    margin: 60px auto;
+    background-color: var(--rosa-suave);
+    padding: 35px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+  
+  .login-area h1 {
+    text-align: center;
+    color: var(--rosa-quente);
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  
+  .login-area .descricao {
+    text-align: center;
+    color: var(--marrom-rosado);
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
+  
+  /* Container dos formulários */
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Títulos */
+  .container h2 {
+    color: var(--rosa-destaque);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Labels */
+  label {
+    font-size: 0.95rem;
+    color: var(--marrom-rosado);
+  }
+  
+  /* Inputs */
+  input {
+    padding: 10px 12px;
+    border: 1px solid var(--rosa-suave2);
+    border-radius: 6px;
+    background-color: var(--branco);
+    font-size: 1rem;
+    transition: 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: var(--rosa-destaque);
+    outline: none;
+    box-shadow: 0 0 4px rgba(228, 138, 161, 0.4);
+  }
+  
+  /* Botões principais */
+  button {
+    padding: 12px;
+    background-color: var(--rosa-destaque);
+    color: var(--branco);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--rosa-claro);
+  }
+  
+  /* Botão de alternar formulários */
+  button.mudar {
+    background-color: transparent;
+    border: 1px solid var(--rosa-destaque);
+    color: var(--rosa-destaque);
+    margin-top: 5px;
+  }
+  
+  button.mudar:hover {
+    background-color: var(--rosa-destaque);
+    color: var(--branco);
+  }
+  
+  /* ========================= */
+  /* Rodapé                    */
+  /* ========================= */
+  .rodape {
+    background-color: var(--rosa-suave);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: var(--cinza-suave);
+    margin-top: 60px;
+    border-top: 1px solid #e9d9d9;
+  }
+  
+  /* ========================= */
+  /* Scrollbar personalizada   */
+  /* ========================= */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--creme-claro);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #f4a6c0;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #f4a6c0 #fff9f3;
+  }
+  

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MG Beauty Wear - Login</title>
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="login.css">
+  <script src="./login.js" defer></script>
+</head>
+<body>
+  
+  <!-- Faixa com a imagem da marca -->
+  <section class="hero-banner">
+    <img src="../img/faixa.png" alt="Faixa MG Beauty Wear">
+  </section>
+
+  <!-- Menu de navegação -->
+  <header class="top-nav">
+    <nav>
+      <ul>
+        <li><a href="./index.html">Início</a></li>
+        <li><a href="./colecao.html">Coleções</a></li>
+        <li><a href="#">Novidades</a></li>
+        <li><a href="./contato.html">Contato</a></li>
+        <li><a class="ativo" href="./login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção de Login -->
+  <section class="login-area">
+    <h1>Entrar na sua Conta</h1>
+    <p class="descricao">Acompanhe seus pedidos e aproveite todas as vantagens da MG Beauty Wear.</p>
+
+    <!-- FORM LOGIN -->
+    <div class="container" id="login">
+        <h2>Login</h2>
+
+        <label>Email:</label>
+        <input type="email" id="email" required>
+
+        <label>Senha:</label>
+        <input type="password" id="senha" required>
+
+        <button id="btnLogin">Entrar</button>
+
+        <button class="mudar" onclick="viewChange(true)">Criar uma conta</button>
+    </div>
+
+    <!-- FORM CADASTRO -->
+    <div class="container" id="cadastrar" style="display: none;">
+        <h2>Cadastre-se</h2>
+
+        <label>Nome completo:</label>
+        <input type="text" id="nome" required>
+
+        <label>Email:</label>
+        <input type="email" id="emailCadastrar" required>
+
+        <label>Telefone:</label>
+        <input type="text" id="telefone" required>
+
+        <label>Senha:</label>
+        <input type="password" id="senhaCadastrar" required>
+
+        <label>Confirmar senha:</label>
+        <input type="password" id="confirmarSenha" required>
+
+        <button id="btnCadastrar">Cadastrar</button>
+
+        <button class="mudar" onclick="viewChange(false)">Já tenho conta</button>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <p>&copy; 2025 MG Beauty Wear.</p>
+  </footer>
+
+</body>
+</html>

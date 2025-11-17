@@ -11,6 +11,7 @@ const conn = require('./db/conn')
 // Importa rotas
 const clienteRoutes = require('./routes/cliente.routes')
 const contatoRoutes = require('./routes/contato.routes')
+const authRoutes = require('./routes/auth.routes')
 
 // Middlewares globais
 app.use(express.urlencoded({ extended: true }))
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 // Rotas públicas
 app.use('/cliente', clienteRoutes)
 app.use('/contato', contatoRoutes)
+app.use('/login', authRoutes)
 
 conn.sync()
 .then(()=>{

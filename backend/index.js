@@ -12,6 +12,7 @@ const conn = require('./db/conn')
 const clienteRoutes = require('./routes/cliente.routes')
 const contatoRoutes = require('./routes/contato.routes')
 const authRoutes = require('./routes/auth.routes')
+const produtoRoutes = require ('./routes/produto.routes')
 
 // Middlewares globais
 app.use(express.urlencoded({ extended: true }))
@@ -27,6 +28,7 @@ app.get('/', (req, res) => {
 app.use('/cliente', clienteRoutes)
 app.use('/contato', contatoRoutes)
 app.use('/login', authRoutes)
+app.use('/produto', produtoRoutes)
 
 conn.sync()
 .then(()=>{

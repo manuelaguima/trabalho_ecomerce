@@ -19,15 +19,15 @@
     <!-- Menu -->
     <header class="top-nav">
         <nav>
-            <ul>
-                <li><a href="./index.html">Início</a></li>
-                <li><a href="./colecao.html">Coleções</a></li>
-                <li><a href="#">Novidades</a></li>
-                <li><a href="./contato.html">Contato</a></li>
-                <li><a class="ativo">Cadastrar Produto</a></li>
-            </ul>
+          <ul>
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./colecao.html">Coleções</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+            <li><a href="./login.html">Login</a></li>
+            <li><a href="./produto.html">Cadastro de produto</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
     <!-- Área principal -->
     <section class="produto-area">
@@ -60,6 +60,27 @@
         <p id="res"></p>
     </section>
 
+    <!-- LISTAGEM -->
+    <section class="lista-area">
+        <h1>Produtos Cadastrados</h1>
+        <p class="descricao">Gerencie seus produtos cadastrados.</p>
+
+        <table class="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Modelo</th>
+                    <th>Preço</th>
+                    <th>Ativo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-corpo"></tbody>
+        </table>
+
+        <p id="msg"></p>
+    </section>
     <footer class="rodape">
         <p>&copy; 2025 MG Beauty Wear.</p>
     </footer>

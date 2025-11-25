@@ -4,7 +4,7 @@ async function criar(req, res) {
 
     try {
 
-        const produto = await criarProduto(req.body)
+        const produto = await Produto.create(req.body)
 
         return res.status(201).json({
             mensagem: 'Produto criado com sucesso',
@@ -12,18 +12,18 @@ async function criar(req, res) {
         })
 
     } catch (err) {
-        return res.status(500).json({ erro: err.message })
+        return res.status(500).json({ error: err.message })
     }
 }
 
 async function listar(req, res) {
     try {
-        const produtos = await listarProdutos()
+        const produtos = await Produto.findAll()
 
         return res.status(200).json(produtos)
 
     } catch (err) {
-        return res.status(500).json({ erro: err.message })
+        return res.status(500).json({ error: err.message })
     }
 }
 
@@ -41,7 +41,7 @@ async function atualizar(req, res) {
         })
 
     } catch (err) {
-        return res.status(500).json({ erro: err.message })
+        return res.status(500).json({ error: err.message })
     }
 
 }
@@ -60,7 +60,7 @@ async function atualizarCompleto(req, res) {
         })
 
     } catch (err) {
-        return res.status(500).json({ erro: err.message })
+        return res.status(500).json({ error: err.message })
     }
 }
 
@@ -74,7 +74,7 @@ async function deletar(req, res) {
         return res.status(200).json({ mensagem: 'Produto apagado com sucesso' })
 
     } catch (err) {
-        return res.status(500).json({ erro: err.message })
+        return res.status(500).json({ error: err.message })
     }
 }
 

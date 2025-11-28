@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MG Beauty Wear - Cadastro de Produtos</title>
+
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="produto.css">
+    <script src="produto.js" defer></script>
+</head>
+<body>
+
+    <!-- Faixa da marca -->
+    <section class="hero-banner">
+        <img src="../img/faixa.png" alt="Faixa MG Beauty Wear">
+    </section>
+
+    <!-- Menu -->
+    <header class="top-nav">
+        <nav>
+          <ul>
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./colecao.html">Coleções</a></li>
+            <li><a href="./contato.html">Contato</a></li>
+            <li><a href="./login.html">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <!-- Área principal -->
+    <section class="produto-area">
+        <h1>Cadastrar Novo Produto</h1>
+        <p class="descricao">Preencha os dados abaixo para adicionar um novo item ao catálogo.</p>
+
+        <div class="container">
+            <label>Nome do Produto:</label>
+            <input type="text" id="nome" required>
+
+            <label>Descrição:</label>
+            <textarea id="descricao"></textarea>
+
+            <label>Modelo:</label>
+            <input type="text" id="modelo" required>
+
+            <label>Preço:</label>
+            <input type="number" id="preco" step="0.01" required>
+
+
+            <label>Ativo para venda?</label>
+            <select id="ativo">
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+
+            <button id="btnCadastrarProduto">Cadastrar Produto</button>
+        </div>
+
+        <p id="res"></p>
+    </section>
+
+    <!-- LISTAGEM -->
+    <section class="lista-area">
+        <h1>Produtos Cadastrados</h1>
+        <p class="descricao">Gerencie seus produtos cadastrados.</p>
+
+        <table class="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Modelo</th>
+                    <th>Preço</th>
+                    <th>Ativo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-corpo"></tbody>
+        </table>
+
+        <p id="msg"></p>
+        <button id="btnListar">Listar</button>
+    </section>
+    <footer class="rodape">
+        <p>&copy; 2025 MG Beauty Wear.</p>
+    </footer>
+</body>
+</html>

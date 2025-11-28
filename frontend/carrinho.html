@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - MG Beauty Wear</title>
+
+    <link rel="stylesheet" href="carrinho.css">
+    <script src="./carrinho.js" defer></script>
+</head>
+
+<body>
+
+    <!-- MENU SUPERIOR -->
+    <header class="top-nav">
+        <nav>
+            <a href="./index.html">Início</a>
+            <a class="ativo" href="./carrinho.html">Carrinho</a>
+            <a href="./colecao.html">Coleções</a>
+        </nav>
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+
+        <h1 class="titulo">Seu Carrinho</h1>
+
+        <div id="area-carrinho" class="tabela-carrinho">
+            <!-- A tabela será gerada dinamicamente pelo progCarrinho.js -->
+        </div>
+
+        <p id="total" class="total">Total: R$ 0,00</p>
+
+        <div class="botoes">
+            <button id="btn-finalizar" class="btn acao">Finalizar Compra</button>
+            <button id="btn-limpar" class="btn limpar">Esvaziar Carrinho</button>
+            <button id="btn-voltar" class="btn voltar" onclick="window.location.href='./colecao.html'">Voltar à Loja</button>
+        </div>
+
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2025 MG Beauty Wear — Elegância e Estilo</p>
+    </footer>
+
+</body>
+</html>

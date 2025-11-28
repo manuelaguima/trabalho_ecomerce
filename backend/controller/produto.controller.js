@@ -33,7 +33,9 @@ async function atualizar(req, res) {
         const { id } = req.params
         const dados = req.body
 
-        const produtoAtualizado = await atualizarProduto(id, dados)
+        const produtoAtualizado = await Produto.findByPk(id)
+
+        await produtoAtualizado.update(dados)
 
         return res.status(200).json({
             mensagem: 'Produto atualizado com sucesso',
@@ -46,30 +48,13 @@ async function atualizar(req, res) {
 
 }
 
-// PUT - Atualização total
-async function atualizarCompleto(req, res) {
-    try {
-        const { id } = req.params
-        const dados = req.body
-
-        const produtoAtualizado = await atualizarProdutoCompleto(id, dados)
-
-        return res.status(200).json({
-            mensagem: 'Produto atualizado completamente com sucesso',
-            produto: produtoAtualizado
-        })
-
-    } catch (err) {
-        return res.status(500).json({ error: err.message })
-    }
-}
-
 // DELETE - apagar
 async function deletar(req, res) {
     try {
         const { id } = req.params
 
-        await apagarProduto(id)
+        const produtoApagar = await Produto.findByPk(id)
+        await produtoApagar.destroy()
 
         return res.status(200).json({ mensagem: 'Produto apagado com sucesso' })
 
@@ -79,5 +64,4 @@ async function deletar(req, res) {
 }
 
 
-module.exports = { criar, listar, atualizar, 
-    atualizarCompleto, deletar }
+module.exports = { criar, listar, atualizar, deletar }

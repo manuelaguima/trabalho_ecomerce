@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Vendedor</title>
+
+    <link rel="stylesheet" href="loginVendedor.css">
+    <script src="loginVendedor.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navegação superior -->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./colecoes.html">Coleções</a></li>
+            <li><a href="#" class="ativo">Vendedor</a></li>
+        </ul>
+    </nav>
+
+    <!-- Área central de login -->
+    <section class="login-area">
+        <h1>Área do Vendedor</h1>
+        <p class="descricao">Acesse seu painel exclusivo</p>
+
+        <div class="container">
+
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario" placeholder="Digite seu usuário">
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Digite sua senha">
+
+            <button id="btn-login">Entrar</button>
+
+            <p id="erro" class="erro"></p>
+
+        </div>
+
+        <nav class="top-nav">
+            <script src="auth.js"></script>
+            <ul>
+                <!-- <li><a href="painel.html" class="ativo">Painel</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="#" id="logout">Sair</a></li> -->
+            </ul>
+        </nav>
+    
+        <section class="login-area">
+            <h1>Painel do Vendedor</h1>
+            <p class="descricao">Gerencie sua loja com facilidade.</p>
+        </section>
+    
+        <script>
+            document.getElementById("logout").onclick = () => {
+                localStorage.removeItem("vendedorLogado");
+                window.location.href = "login.html";
+            };
+        </script>
+
+    </section>
+
+    <footer class="rodape">
+        <p>&copy; 2025 MG Beauty Wear</p>
+    </footer>
+
+</body>
+</html>

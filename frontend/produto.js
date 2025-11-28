@@ -1,92 +1,89 @@
-btnCadastrarProduto = document.getElementById("btnCadastrarProduto")
-let tabela = document.getElementById('tabela-corpo')
+// BOTÕES
+const btnCadastrarProduto = document.getElementById("btnCadastrarProduto");
+const btnListar = document.getElementById("btnListar");
+let tabela = document.getElementById("tabela-corpo");
 
-btnCadastrarProduto.addEventListener('click', () => {
-
-    const nome = document.getElementById("nome").value
-    const descricao = document.getElementById("descricao").value
-    const modelo = document.getElementById("modelo").value
-    const preco = document.getElementById("preco").value
-    const ativo = document.getElementById("ativo").value === "true"
-
-    const res = document.getElementById("res")
+// CADASTRAR
+btnCadastrarProduto.addEventListener("click", () => {
 
     const valores = {
-        nome: nome,
-        descricao: descricao,
-        modelo:modelo,
-        preco:preco,
-        ativo:ativo
-    }
+        nome: document.getElementById("nome").value,
+        descricao: document.getElementById("descricao").value,
+        modelo: document.getElementById("modelo").value,
+        preco: document.getElementById("preco").value,
+        ativo: document.getElementById("ativo").value === "true"
+    };
 
-    fetch('http://localhost:3000/produto',{
-        method: 'POST',
-        headers: {
-            'Content-Type' : 'application/json'
-        },
+    fetch("http://localhost:3000/produto", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(valores)
     })
-    .then(resp => resp.json())
+    .then(r => r.json())
     .then(dados => {
-        if (!dados.error) {
-            res.innerHTML = `
-            nome: ${dados.produto.nome}<br>
-            descricao: ${dados.produto.descricao}<br>
-            modelo:${dados.produto.modelo}<br>
-            preco:${dados.produto.preco}<br>
-            `
-        } else {
-            res.innerHTML = dados.error ? dados.error : "Erro ao cadastrar"
+        const res = document.getElementById("res");
+
+        if (dados.error) {
+            res.innerHTML = dados.error;
+            return;
         }
+
+        res.innerHTML = `
+            Produto cadastrado com sucesso! <br>
+            Nome: ${dados.produto.nome}<br>
+            Modelo: ${dados.produto.modelo}<br>
+            Preço: R$ ${dados.produto.preco}
+        `;
     })
-    .catch((err)=>{
-        alert('Erro ao cadastrar os produtos')
-        console.error('Erro ao cadastrar os produtos',err)
-    })
-})
+    .catch(err => {
+        alert("Erro ao cadastrar produto");
+        console.error(err);
+    });
+
+});
+
+// LISTAR PRODUTOS
+btnListar.addEventListener("click", listarProdutos);
 
 function listarProdutos() {
     fetch("http://localhost:3000/produto")
         .then(r => r.json())
         .then(produtos => {
-            tabela.innerHTML = ""
+            tabela.innerHTML = "";
 
             produtos.forEach(p => {
                 tabela.innerHTML += `
                     <tr>
-                        <td>${p.id}</td>
+                        <td>${p.codProduto}</td>
                         <td>${p.nome}</td>
                         <td>${p.modelo}</td>
                         <td>R$ ${p.preco}</td>
                         <td>${p.ativo ? "Sim" : "Não"}</td>
                         <td>
-                            <button onclick="editarProduto(${p.id})">Editar</button>
-                            <button onclick="deletarProduto(${p.id})">Excluir</button>
+                            <button onclick="editarProduto(${p.codProduto})">Editar</button>
+                            <button onclick="deletarProduto(${p.codProduto})">Excluir</button>
                         </td>
                     </tr>
-                `
-            })
-        })
+                `;
+            });
+        });
 }
 
-// APAGAR
+// EXCLUIR
 function deletarProduto(id) {
-    if (!confirm("Deseja excluir este produto?")) return
+    if (!confirm("Deseja excluir este produto?")) return;
 
     fetch(`http://localhost:3000/produto/${id}`, {
         method: "DELETE"
     })
     .then(r => r.json())
-    .then(dados => {
-        alert(dados.mensagem)
-        listarProdutos()
-    })
+    .then(() => listarProdutos());
 }
 
 // EDITAR (PATCH)
 function editarProduto(id) {
-    const novoNome = prompt("Novo nome:")
-    if (!novoNome) return
+    const novoNome = prompt("Novo nome:");
+    if (!novoNome) return;
 
     fetch(`http://localhost:3000/produto/${id}`, {
         method: "PATCH",
@@ -94,9 +91,5 @@ function editarProduto(id) {
         body: JSON.stringify({ nome: novoNome })
     })
     .then(r => r.json())
-    .then(() => listarProdutos())
-}
-
-window.onload = () => {
-    listarProdutos()
+    .then(() => listarProdutos());
 }

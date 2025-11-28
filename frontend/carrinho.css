@@ -1,0 +1,171 @@
+/* CORES */
+:root {
+    --rosa-claro: #F8A1C4;
+    --rosa-suave: #F4D9E1;
+    --creme-claro: #FFF9F3;
+    --branco: #ffffff;
+    --cinza-suave: #5C5C5C;
+    --rosa-destaque: #E48AA1;
+    --rosa-quente: #C77D8A;
+    --bege-medio: #D6BFAF;
+    --marrom-rosado: #7F4A53;
+  }
+  
+  /* RESET */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--creme-claro);
+    color: var(--cinza-suave);
+    font-family: "Georgia", serif;
+  }
+  
+  /* MENU */
+  .top-nav {
+    background-color: var(--rosa-suave);
+    padding: 14px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  }
+  
+  .top-nav nav a {
+    margin: 0 18px;
+    text-decoration: none;
+    color: var(--cinza-suave);
+    font-size: 17px;
+    padding-bottom: 4px;
+    transition: .3s;
+  }
+  
+  .top-nav nav a:hover,
+  .top-nav nav a.ativo {
+    color: var(--rosa-quente);
+    border-bottom: 1px solid var(--rosa-quente);
+  }
+  
+  /* CONTEÚDO */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 2.4rem;
+    color: var(--rosa-quente);
+    margin-bottom: 30px;
+  }
+  
+  /* TABELA DO CARRINHO */
+  .tabela-carrinho {
+    background: var(--rosa-suave);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  }
+  
+  .tabela-carrinho table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabela-carrinho th,
+  .tabela-carrinho td {
+    padding: 14px;
+    border-bottom: 1px solid var(--rosa-claro);
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .tabela-carrinho th {
+    background-color: var(--rosa-claro);
+    color: var(--branco);
+  }
+  
+  .tabela-carrinho tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .total {
+    margin-top: 25px;
+    text-align: right;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--marrom-rosado);
+  }
+  
+  /* BOTÕES */
+  .botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .btn {
+    flex: 1;
+    padding: 12px 18px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s ease;
+  }
+  
+  .acao {
+    background-color: var(--rosa-destaque);
+    color: var(--branco);
+  }
+  
+  .acao:hover {
+    background-color: var(--rosa-claro);
+  }
+  
+  .limpar {
+    background-color: #ff9ea3;
+    color: var(--branco);
+  }
+  
+  .limpar:hover {
+    background-color: #ff6f76;
+  }
+  
+  .voltar {
+    background-color: var(--bege-medio);
+    color: var(--branco);
+  }
+  
+  .voltar:hover {
+    background-color: var(--marrom-rosado);
+  }
+  
+  /* RODAPÉ */
+  .rodape {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: var(--rosa-suave);
+    text-align: center;
+    color: var(--cinza-suave);
+    border-top: 1px solid var(--rosa-claro);
+  }
+  
+  /* SCROLLBAR */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--rosa-claro);
+    border-radius: 20px;
+  }
+  
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--rosa-claro) var(--creme-claro);
+  }
+  

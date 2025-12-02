@@ -177,3 +177,124 @@ html {
     scrollbar-width: thin;
     scrollbar-color: #f4a6c0 #fff9f3;
 }
+ 
+::-webkit-scrollbar-track {
+    background: var(--creme-claro);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #f4a6c0;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #f4a6c0 #fff9f3;
+  } 
+  
+  /* ========================= */
+/* Área de Estoque           */
+/* ========================= */
+
+.estoque-area {
+    max-width: 700px;
+    margin: 60px auto;
+    background-color: var(--rosa-suave);
+    padding: 30px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.estoque-area h2 {
+    text-align: center;
+    color: var(--rosa-quente);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.estoque-area .descricao {
+    text-align: center;
+    color: var(--marrom-rosado);
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* Formulário de Estoque */
+.estoque-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Inputs específicos */
+.estoque-form input {
+    padding: 10px 12px;
+    border: 1px solid var(--rosa-suave2);
+    border-radius: 6px;
+    background-color: var(--branco);
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.estoque-form input:focus {
+    border-color: var(--rosa-destaque);
+    outline: none;
+    box-shadow: 0 0 4px rgba(228, 138, 161, 0.4);
+}
+
+/* Botão Estoque */
+#btn-estoque {
+    padding: 12px;
+    background-color: var(--rosa-destaque);
+    color: var(--branco);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#btn-estoque:hover {
+    background-color: var(--rosa-claro);
+}
+
+/* Lista de Estoque */
+.lista-estoque {
+    margin-top: 35px;
+    background: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.lista-estoque h3 {
+    color: var(--rosa-quente);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Tabela */
+.tabela-estoque {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-estoque th,
+.tabela-estoque td {
+    border-bottom: 1px solid var(--rosa-suave2);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.tabela-estoque th {
+    background-color: var(--rosa-suave);
+    color: var(--marrom-rosado);
+    font-weight: bold;
+}
+
+.tabela-estoque tr:hover {
+    background-color: var(--rosa-suave2);
+}

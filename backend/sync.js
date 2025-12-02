@@ -2,6 +2,7 @@ const conn = require('./db/conn')
 const Cliente = require('./model/Cliente')
 const Contato = require('./model/Contato')
 const Produto = require ('./model/Produto')
+const Estoque = require ('./model/Estoque')
 
 async function syncDataBase() {
     try{
